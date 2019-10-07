@@ -9,7 +9,12 @@
             "request": "launch",
             "name": "Launch Main",
             "url": "http://localhost:8100",
-            "webRoot": "${workspaceFolder}/workspace/projects/main"
+            "webRoot": "${workspaceFolder}/workspace/projects/main",
+            "sourceMapPathOverrides": {
+                "webpack:///ng://core/*": "${workspaceFolder}/workspace/projects/core/src/*",
+                "webpack:///ng://datasource/*": "${workspaceFolder}/workspace/projects/datasource/src/*",
+                "webpack:///./src/*": "${workspaceFolder}/workspace/projects/main/src/*"
+            }
         }
     ]
 }
