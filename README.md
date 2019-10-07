@@ -57,8 +57,9 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
 1. あらかじめDocker エンジンを起動しておきます
 2. ローカルで```ionic start "(project name)" https://github.com/TentaShion/Ionic4AngularTemplate --type=angular``` を実行し、このテンプレートを入手します
 3. エラーが出ても気にせず、手順２で作成したワークスペースをVisual Studio Code で開きます
-4. ターミナルを開き```sh run-playground.sh``` を実行します
-5. 手順４が完了するとDocker コンテナ内でコマンド入力できるようになるので、実装作業をしていきます
+4. コミット履歴が引き継がれている状態なので、ローカルGit リポジトリを削除し、再度作り直します
+5. ターミナルを開き```sh run-playground.sh``` を実行します
+6. 手順４が完了するとDocker コンテナ内でコマンド入力できるようになるので、実装作業をしていきます
     * 最初は```node_modules``` をインストールしたいので、コンテナ内で```yarn install --frozen-lockfile``` を実行してください(チーム全体で揃えるため)<br />
         → もし実行時にエラーが発生したら、プロジェクト管理者に連絡し、ライブラリ依存関係の確認を依頼してください<br />
         → linux 環境でfsevents のインストールは時間がかかるので、気長にお待ちください
@@ -76,13 +77,16 @@ Xcode | [Xcode 11][xcode] | × | ローカル環境でiOS アプリを開発す�
         5. ```ionic build``` を実行します(※パスは適宜通してください)
         6. ```ionic capacitor add (platform)``` を実行します(※パスは適宜通してください)
         7. これでプロジェクト自体は生成できますが、ここから先はローカル環境で実行してください
-6. 作業が終わったら、Docker コンテナ内で```exit``` を入力します
+7. 作業が終わったら、Docker コンテナ内で```exit``` を入力します
 
 
 ### ローカル環境
 1. ```Playground.Dockerfile``` の内容を確認し同じ環境を整備します
-2. ```cd workspace``` で作業場所に移動します
-3. 作業していきます
+2. ローカルで```ionic start "(project name)" https://github.com/TentaShion/Ionic4AngularTemplate --type=angular``` を実行し、このテンプレートを入手します
+3. エラーが出ても気にせず、手順２で作成したワークスペースをVisual Studio Code で開きます
+4. コミット履歴が引き継がれている状態なので、ローカルGit リポジトリを削除し、再度作り直します
+5. ```cd workspace``` で作業場所に移動します
+6. 作業していきます
 
 
 
